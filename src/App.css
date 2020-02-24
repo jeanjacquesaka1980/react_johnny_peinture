@@ -1,0 +1,116 @@
+/* GLOBAL */
+
+.underline {
+  border-top: 2px solid #81C4DC;
+  width: 30%
+}
+
+.blue {
+  color: #81C4DC;
+}
+
+a {
+  text-decoration-line: none !important;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: #81C4DC !important;
+}
+
+/* HEADER */
+
+.header-container {
+  background-image: url("images/theme-photo.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-fluid-header {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.logo-header {
+  height: auto;
+  width: 37.5rem;
+}
+
+.btn-plus-infos,
+.btn-me-contacter {
+  background-color: #81C4DC !important;
+  border: 0px !important;
+  width: 12.5rem;
+  height: 3.75rem;
+}
+
+/* MAIN */
+
+.profile-picture {
+  border-radius: 50% !important;
+}
+
+.icon {
+  height: 3em;
+  width: auto;
+}
+
+.leaflet-container {
+  height: 400px;
+  width: 100%;
+}
+
+.star {
+  height: 1em;
+  width: auto
+}
+
+.avant-apres {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* FOOTER */
+
+.footer-container {
+  background-color: #81C4DC;
+}
+
+.fb-icon {
+  height: 3em;
+  width: auto
+}
+
+.arrow-icon {
+  height: 3em;
+  width: auto;
+  animation: bounce 2s infinite;
+}
+
+.btn-me-contacter-footer {
+  background-color: #f9f9f9 !important;
+  border: 0px !important;
+  width: 12.5rem;
+  height: 3.75rem;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header-container {
+    background-image: url("images/bg-johnny-peinture-phone.jpg");
+  }
+}
