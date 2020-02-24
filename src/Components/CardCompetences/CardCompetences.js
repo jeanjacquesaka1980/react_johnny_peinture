@@ -4,11 +4,16 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
-const CardCompetences = ({ src, CardTitle}) => {
+// import lazy-load
+import LazyLoad from "react-lazyload";
+
+const CardCompetences = ({ src, CardTitle }) => {
   return (
     <Col xs={12}>
       <Card className="border-0 shadow mt-3">
-        <Card.Img variant="top" src={src} />
+        <LazyLoad height={200} once>
+          <Card.Img variant="top" src={src} />
+        </LazyLoad>
         <Card.Body>
           <Card.Title className="my-auto">{CardTitle}</Card.Title>
         </Card.Body>

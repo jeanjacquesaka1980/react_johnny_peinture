@@ -21,7 +21,7 @@ const Temoignages = () => {
         <h2 className="my-3">Témoignages</h2>
         <hr className="underline"></hr>
       </Col>
-      <CardDeck className="w-100">
+      <CardDeck className="w-100 mx-auto text-center">
         <IconContext.Provider value={{ color: "#81C4DC" }}>
           <CardTemoignages
             CardTitle="Yevette"
@@ -48,19 +48,19 @@ const Temoignages = () => {
             CardText="Super peinture au top !"
           />
           <Col xs={12}>
-          <Card className="border-0 shadow mt-3">
-            <Card.Body>
-              <Card.Text className="mb-3">
-                Les témoignages vous on convaincu ?
-              </Card.Text>
-              <Button className="btn-me-contacter shadow">
-                <Link className="text-light" to="/contacter">
-                  Me contacter
-                </Link>
-              </Button>
-            </Card.Body>
-          </Card>
-        </Col>
+            <Card className="border-0 shadow mt-3">
+              <Card.Body>
+                <Card.Text className="mb-3">
+                  Les témoignages vous on convaincu ?
+                </Card.Text>
+                <Button className="btn-me-contacter shadow">
+                  <Link className="text-light" to="/contacter">
+                    Me contacter
+                  </Link>
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
         </IconContext.Provider>
       </CardDeck>
     </>
@@ -83,7 +83,7 @@ const TemoignagesRouter = () => {
         </Route>
       </Switch>
     </Router>
-  )
-}
+  );
+};
 
 export default Temoignages;

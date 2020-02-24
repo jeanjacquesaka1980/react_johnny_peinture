@@ -18,6 +18,9 @@ import Apres2 from "../../images/apres-2.jpg";
 // import router
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+// import lazy-load
+import LazyLoad from "react-lazyload";
+
 const PhotosGal = () => {
   return (
     <>
@@ -26,8 +29,20 @@ const PhotosGal = () => {
         <hr className="underline"></hr>
       </Col>
       <CardDeck className="w-100">
-        <CardPhotosGal CardTitle="Porte de garage roulante" CardText="Réalisé avec amour" src1={Avant} src2={Apres}/>
-        <CardPhotosGal CardTitle="Fenêtre sous comble" CardText="Réalisé avec amour" src1={Avant2} src2={Apres2}/>
+        <LazyLoad height={200} once>
+          <CardPhotosGal
+            CardTitle="Porte de garage roulante"
+            CardText="Réalisé avec amour"
+            src1={Avant}
+            src2={Apres}
+          />
+          <CardPhotosGal
+            CardTitle="Fenêtre sous comble"
+            CardText="Réalisé avec amour"
+            src1={Avant2}
+            src2={Apres2}
+          />
+        </LazyLoad>
         <Col xs={12}>
           <Card className="border-0 shadow mt-3">
             <Card.Body>
@@ -63,7 +78,7 @@ const PhotosGalRouter = () => {
         </Route>
       </Switch>
     </Router>
-  )
-}
+  );
+};
 
 export default PhotosGal;

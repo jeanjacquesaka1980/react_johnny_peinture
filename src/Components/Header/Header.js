@@ -15,22 +15,31 @@ import logo from "../../images/johnny-logo.png";
 // import router
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+// import lazy-load
+import LazyLoad from "react-lazyload";
+
 const Header = () => {
   return (
     <header className="header-container mx-auto text-center">
       <Container className="container-fluid-header" fluid={true}>
         <Row>
           <Col className="frame-logo-header mt-5 mx-auto text-center" xs={10}>
-            <Image className="logo-header" src={logo} fluid roundedCircle />
+            <LazyLoad height={200} once>
+              <Image className="logo-header" src={logo} fluid roundedCircle />
+            </LazyLoad>
           </Col>
           <Col className="mt-5" xs={12}>
             <Button className="btn-plus-infos shadow-sm" size="lg">
-              <Link className="text-light" to="/apropos">Plus d'infos</Link>
+              <Link className="text-light" to="/apropos">
+                Plus d'infos
+              </Link>
             </Button>
           </Col>
           <Col className="mt-3" xs={12}>
             <Button className="btn-me-contacter shadow" size="lg">
-              <Link className="text-light" to="/contacter">Me contacter</Link>
+              <Link className="text-light" to="/contacter">
+                Me contacter
+              </Link>
             </Button>
           </Col>
         </Row>

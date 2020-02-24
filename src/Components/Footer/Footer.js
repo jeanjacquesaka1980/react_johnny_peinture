@@ -25,14 +25,6 @@ const Footer = () => {
       <Container fluid={true}>
         <Row>
           <IconContext.Provider value={{ color: "#4267B2" }}>
-            <Col className="mt-5 mx-auto text-center" xs={10}>
-              <Image
-                className="logo-header shadow"
-                src={logo}
-                fluid
-                roundedCircle
-              />
-            </Col>
             <Col xs={12}>
               <FaArrowDown className="arrow-icon mt-3" />
             </Col>
@@ -50,6 +42,14 @@ const Footer = () => {
               <Button className="bg-transparent border-0 mb-3" size="lg">
                 <FaFacebook className="fb-icon" />
               </Button>
+            </Col>
+            <Col className="my-5 mx-auto text-center" xs={10}>
+              <Image
+                className="logo-header shadow"
+                src={logo}
+                fluid
+                roundedCircle
+              />
             </Col>
           </IconContext.Provider>
         </Row>

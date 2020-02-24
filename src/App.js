@@ -122,7 +122,7 @@ const App = props => {
               </Route>
               <Route path="/temoignages">
                 <Row>
-                  <FadeIn transitionDuration="600">
+                  <FadeIn className="w-100" transitionDuration="600">
                     <ScrollToTopOnMount />
                     <Temoignages />
                   </FadeIn>
