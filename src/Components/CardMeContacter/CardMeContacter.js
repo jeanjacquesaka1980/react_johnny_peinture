@@ -6,7 +6,7 @@ import Card from "react-bootstrap/Card";
 
 const CardMeContacter = ({ children, CardTitle, Contact, CardText, map }) => {
   return (
-    <Col xs={12}>
+    <Col lg={6} md={6} sm={12} xs={12}>
       <Card className="border-0 shadow mt-3">
         {children}
         <Card.Body>

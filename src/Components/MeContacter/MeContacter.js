@@ -5,20 +5,20 @@ import MyMap from "../MyMap/MyMap";
 // import bootsrtap
 import Col from "react-bootstrap/Col";
 import CardDeck from "react-bootstrap/CardDeck";
+import Card from "react-bootstrap/Card";
 
 // import icons
 import { IconContext } from "react-icons";
 import { FaPhone } from "react-icons/fa";
 import { FaAt } from "react-icons/fa";
-import { FaRegCompass } from "react-icons/fa";
 import { FiTruck } from "react-icons/fi";
 
 class MeContacter extends React.Component {
   render() {
     let myMap = <MyMap />;
     return (
-      <>
-        <Col xs={12}>
+      <section id="contacter">
+        <Col sm={12} xs={12}>
           <h2 className="my-3">Me Contacter</h2>
           <hr className="underline"></hr>
         </Col>
@@ -39,16 +39,19 @@ class MeContacter extends React.Component {
             >
               <FaAt className="mt-3 icon" />
             </CardMeContacter>
-            <CardMeContacter
-              CardTitle="Déplacements"
-              CardText="J'interviens sur une zone de 30km aux alentours de Froberville. Si vous êtes au delà de cette zone, contactez moi pour voir quelles sont les autres possibilités au 06.70.22.38.38 !"
-              map={myMap}
-            >
+            <Col md={12} sm={12} xs={12}>
+              <Card className="border-0 shadow my-3">
               <FiTruck className="mt-3 icon" />
-            </CardMeContacter>
+                <Card.Body>
+                  <Card.Title className="mb-3">Déplacements</Card.Title>
+                  <Card.Text>J'interviens sur une zone de 30km aux alentours de Froberville. Si vous êtes au delà de cette zone, contactez moi pour voir quelles sont les autres possibilités au 06.70.22.38.38 !</Card.Text>
+                  {myMap}
+                </Card.Body>
+              </Card>
+            </Col>
           </IconContext.Provider>
         </CardDeck>
-      </>
+      </section>
     );
   }
 }
